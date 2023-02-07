@@ -33,8 +33,8 @@ spec:
   {{- range $ingressPaths }}
           - path: {{ . }}
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: http
+              service:
+                name: {{ $fullName }}
   {{- end }}
   {{- end }}
 {{- end }}
